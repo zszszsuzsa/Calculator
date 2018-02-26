@@ -67,10 +67,15 @@ export class AppComponent {
   }
 
   addFloatingpoint(event) {
-    if (this.value[this.formula.length - 1] !== '.') {
-      // this.displayValue(event);
+
+//    if (this.value % 1===0 && this.value[this.value.length - 1] !== '.'){
+  if (this.value % 1===0 && this.value[this.value.toString().length - 1] !== '.'){
       this.value = this.value + event.target.value;
     }
+    // if (this.value[this.formula.length - 1] !== '.') {
+    //   // this.displayValue(event);
+    //   this.value = this.value + event.target.value;
+    // }
   }
 
   // Gives the answer after pressing = sign
